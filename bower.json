@@ -1,0 +1,17 @@
+{
+  "name": "foundation-tabs-to-select",
+  "authors": [
+    "Anthony Simone <asimone@elevatedthird.com>"
+  ],
+  "description": "Add dropdown select for mobile Foundation Sites tabs navigation",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/anthonysimone/foundation-tabs-to-select",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
