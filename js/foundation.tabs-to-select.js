@@ -13,7 +13,10 @@
       selectWrapperClass: "select-holder",
       selectClass: "link-select",
       tabsClass: "f-tabs",
-      activeTabClass: "is-active"
+      activeTabClass: "is-active",
+      tabTextTransform: function($tab) {
+        return $tab;
+      }
     };
 
   // The actual plugin constructor
@@ -40,6 +43,8 @@
         $tabsWrapper = $(this.element),
         $tabs = $tabsWrapper.find('.' + this.options.tabsClass);
 
+      var base = this;
+
       // Add wrapper to select element and append to DOM
       $selectWrapper.append($select).insertBefore($tabs);
 
@@ -48,7 +53,7 @@
         var option = $('<option />')
           .appendTo($select)
           .val($(this).attr('href'))
-          .html($(this).html());
+          .html(base.options.tabTextTransform($(this)));
       });
 
       // Set select to initial active tab (in case of deep linking)

@@ -22,5 +22,6 @@ var options = {
 	selectClass: "link-select",
 	tabsClass: "f-tabs",
 	activeTabClass: "is-active"
+	tabTextTransform: function($tab) {} // returns string
 };
 ```
